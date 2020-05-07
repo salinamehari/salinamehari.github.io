@@ -1,37 +1,192 @@
-## Welcome to GitHub Pages
+<!DOCTYPE HTML>
 
-You can use the [editor on GitHub](https://github.com/salinamehari/salinamehari.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+<style>
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+} /* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
+		background-repeat: repeat,			no-repeat,			no-repeat;
+		background-size: 100px 100px, cover,				cover;
+		background-position: top left,		center center,		bottom center;
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+} /* ---- stats.js ---- */
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+</style>
 
-```markdown
-Syntax highlighted code block
+<html>
 
-# Header 1
-## Header 2
-### Header 3
+<!-- particles.js container -->
+<div id="particles-js"></div> <!-- stats - count particles -->
+<div class="count-particles"> <span class="js-count-particles">--</span> particles </div> <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 
-- Bulleted
-- List
+	<head>
+		<title>Salina's Resume</title>
+		<meta charset="utf-8" />
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-[Link](url) and ![Image](src)
-```
+			<div id="wrapper">
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+					<section id="main">
+						<header>
+							<span class="avatar"><img src="images/IMG_2888.jpeg" alt=""
+								style=
+								"width:300px;
+								height:450px"></span>
+							
+							<h1>Salina Mehari</h1>
+							<p>Candidate for Doctor of Pharmacy (Pharm.D.)</p>
+							
+						</header>
+					
+						<ul class="actions special">
+							<li><a href="file:///Users/salinamehari/Desktop/myresume-master/home.html" class="button">Learn More</a></li>
+						</ul>
+					</section>
 
-### Jekyll Themes
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Salina Mehari</li></a></li>
+						</ul>
+					</footer>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/salinamehari/salinamehari.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+			</div>
 
-### Support or Contact
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script> </html>
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+<script>
+particlesJS("particles-js", {
+	particles: {
+	  number: { value: 80, density: { enable: true, value_area: 800 } },
+	  color: { value: "#dec4c4" },
+	  shape: {
+		type: "circle",
+		stroke: { width: 0, color: "#000000" },
+		polygon: { nb_sides: 5 },
+		image: { src: "img/github.svg", width: 100, height: 100 }
+	  },
+	  opacity: {
+		value: 0.5,
+		random: false,
+		anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
+	  },
+	  size: {
+		value: 8,
+		random: true,
+		anim: { enable: false, speed: 40, size_min: 0.1, sync: false }
+	  },
+	  line_linked: {
+		enable: true,
+		distance: 150,
+		color: "#ffffff",
+		opacity: 0.4,
+		width: 4
+	  },
+	  move: {
+		enable: true,
+		speed: 6,
+		direction: "none",
+		random: false,
+		straight: false,
+		out_mode: "out",
+		bounce: false,
+		attract: { enable: false, rotateX: 600, rotateY: 1200 }
+	  }
+	},
+	interactivity: {
+	  detect_on: "canvas",
+	  events: {
+		onhover: { enable: true, mode: "grab" },
+		onclick: { enable: true, mode: "push" },
+		resize: true
+	  },
+	  modes: {
+		grab: { distance: 400, line_linked: { opacity: 1 } },
+		bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+		repulse: { distance: 200, duration: 0.4 },
+		push: { particles_nb: 4 },
+		remove: { particles_nb: 2 }
+	  }
+	},
+	retina_detect: true
+  });
+  var count_particles, stats, update;
+  stats = new Stats();
+  stats.setMode(0);
+  stats.domElement.style.position = "absolute";
+  stats.domElement.style.left = "0px";
+  stats.domElement.style.top = "0px";
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector(".js-count-particles");
+  update = function () {
+	stats.begin();
+	stats.end();
+	if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+	  count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+	}
+	requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
+	</body>
